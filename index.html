@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <title>IP Address Tracker</title>
+</head>
+<body>
+    <div id="whole-div">
+        <div id="head-div">
+            <div id="info-div">
+                <div id="ip-detail" class="details"></div><div id="location-detail" class="details"></div><div id="timezone-detail" class="details"></div><div id="ips-detail" class="details"></div>
+            </div>
+                    IP Address Tracker
+                    <div id="search-div"><input type="text" placeholder="Search for any IP address or domain" id="search-box"> <button id="searchButton" onclick="getLocation()"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"></path></svg> </button></div>
+                </div>
+        <div id="body-div">  
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
