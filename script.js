@@ -1,3 +1,5 @@
+
+//This function get geoLocation details from the given IP address
 function getLocation(){
    let ipValue = document.getElementById("search-box").value;
    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_ra5bcJgbdzL4EYu0JIYSKsnqZdVFe&ipAddress=${ipValue}`)
@@ -18,7 +20,7 @@ function getLocation(){
     })
 }
 
-
+//This function load the map from leaflet JS
 function getMap(data){
     document.getElementById("body-div").innerHTML = '<div id="map"></div>';  
     var map = L.map('map').setView([data.location.lat, data.location.lng], 13);
@@ -33,9 +35,13 @@ function getMap(data){
     marker.bindPopup("<b>This is your IP address location</b>").openPopup();
 }
 
+
+//This function render the given details inside the certain div
 function setDetails(data){
     document.getElementById("ip-detail").innerHTML = `IP ADDRESS <br><h1> ${data.ip} </h1>`
     document.getElementById("location-detail").innerHTML = `LOCATION<br><h1> ${data.location.city} , ${data.location.country}  </h1>`
     document.getElementById("timezone-detail").innerHTML = `TIMEZONE <br><h1> UTC ${data.location.timezone} </h1>`
     document.getElementById("ips-detail").innerHTML = `ISP <br><h1> ${data.isp} </h1>`
 }
+
+getLocation();
